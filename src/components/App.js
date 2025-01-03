@@ -12,9 +12,9 @@ const App = () => {
 
   return (
     <div>
-        <p>You have been on this page for {time} seconds.</p>
+        <p>You\'ve been on this page for {time} seconds.</p>
     </div>
   )
 }
 
-export default App
+export default App;
