@@ -1,11 +1,18 @@
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './../styles/App.css';
 
 const App = () => {
+  const [time, setTime] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => setTime(time+1), 1000)
+    return () => clearInterval(interval);
+  }, [time]);
+
   return (
     <div>
-        {/* Do not remove the main div */}
+        <p>You have been on this page for {time} seconds.</p>
     </div>
   )
 }
